@@ -1,0 +1,113 @@
+@import url(global-rols.css);
+
+/* ... */
+/* ... */
+/* ... */
+
+main {
+    width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 60px 30px;
+}
+
+main .card {
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 308px;
+}
+
+main .icon img {
+    width: 80px;
+}
+
+main .card .icon,
+main .card .title {
+    margin-bottom: 48px;
+}
+
+main .card .title {
+    color: var(--light-gray);
+}
+
+main .card .details {
+    margin-bottom: 85px;
+    color: var(--trans-white);
+    flex: 1;
+}
+
+main .card.first {
+    background-color: var(--bright-orange);
+} 
+main .card.second {
+    background-color: var(--dark-cyan);
+} 
+main .card.third {
+    background-color: var(--very-dark-cyan);
+} 
+
+main .card.first button {
+    color: var(--bright-orange);
+}
+main .card.second button {
+    color: var(--dark-cyan);
+}
+main .card.third button {
+    color: var(--very-dark-cyan);
+}
+
+main .card button:hover {
+    border: 2px solid var(--light-gray);
+    color: var(--light-gray);
+    background-color: transparent;
+}
+
+
+/* mobile */
+@media (max-width: 674px) {
+    main {
+        flex-direction: column;
+    }
+    main .card .details {
+        margin-bottom: 27px;
+    }
+    main .card.first {
+        border-radius: 8px 8px 0 0;
+    }
+    main .card.third {
+        border-radius: 0 0 8px 8px;
+    }
+    .attribution {
+        display: none;
+    }
+}
+
+/* tablet */
+@media (min-width: 675px) and (max-width: 983px) {
+    main .card .details {
+        margin-bottom: 27px;
+    }
+    main .card.first {
+        border-radius: 8px 0 0 0;
+    }
+    main .card.second {
+        border-radius: 0 8px 0 0;
+    }
+    main .card.third {
+        border-radius: 0 0 8px 8px;
+    }
+    .attribution {
+        display: none;
+    }
+}
+
+/* desktop */
+@media (min-width: 984px) {
+    main .card.first {
+        border-radius: 8px 0 0 8px;
+    }
+    main .card.third {
+        border-radius: 0 8px 8px 0;
+    }
+}
